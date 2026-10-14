@@ -22,3 +22,10 @@
 
 ## GitHub Pages 활성화
 GitHub 저장소 → **Settings → Pages → Build and deployment → Deploy from a branch → main / (root) → Save**. (설정 권한이 있는 계정으로 수행)
+
+## 공식몰 수집 반영 (2026-10-14)
+- Brand 페이지 공식 원고의 핵심 메시지 3개를 메인에 반영
+- 메인 Best Sellers에서 확인한 상품 3개 및 표시 가격을 정적 미리보기에 반영
+- 공식몰 상품 상세 URL 연결, 고객센터 및 사업자 정보 반영
+- 가격/재고/품절/상품 이미지/메뉴별 최신 데이터는 Cafe24 관리 데이터가 기준이며 정적 코드에서 유지하지 않음
+- HOT DEAL은 오드벨 자체 제품이 아닌 타사 상품도 혼재하므로 브랜드 컬렉션에 합치지 않음
