@@ -11,3 +11,17 @@ const nav=document.querySelector('#navigation'),toggle=document.querySelector('.
 toggle?.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'메뉴 닫기':'메뉴 열기')});
 nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');toggle?.setAttribute('aria-expanded','false')}));
 if('IntersectionObserver'in window){const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})},{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el))}else document.querySelectorAll('.reveal').forEach(el=>el.classList.add('visible'));
+// Shared search overlay with verified featured products; server search runs on the official Cafe24 store.
+function setupStoreSearch(){
+const trigger=document.querySelector('.search-trigger'),panel=document.querySelector('#search-panel'),close=document.querySelector('.search-close');
+if(!trigger||!panel)return;
+const input=panel.querySelector('input[name="keyword"]'),suggestions=panel.querySelector('#search-suggestions');
+const products=[['글로우 스킨핏 콜라겐 마스크','https://odebell.com/product/detail.html?product_no=1723'],['피토 뮤신 리페어 크림','https://odebell.com/product/detail.html?product_no=2059'],['애사비','https://odebell.com/product/detail.html?product_no=2021']];
+const render=()=>{const q=input.value.trim().toLocaleLowerCase();suggestions.replaceChildren();if(!q)return;const items=products.filter(p=>p[0].toLocaleLowerCase().includes(q));items.forEach(([name,url])=>{const a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener';a.textContent=name+' ↗';suggestions.appendChild(a)})};
+const setOpen=open=>{panel.hidden=!open;trigger.setAttribute('aria-expanded',String(open));document.body.classList.toggle('search-open',open);if(open){input.focus()}else{trigger.focus()}};
+trigger.addEventListener('click',()=>setOpen(panel.hidden));close.addEventListener('click',()=>setOpen(false));
+input.addEventListener('input',render);
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!panel.hidden)setOpen(false)});
+document.addEventListener('click',e=>{if(!panel.hidden&&!panel.contains(e.target)&&!trigger.contains(e.target))setOpen(false)});
+}
+setupStoreSearch();
