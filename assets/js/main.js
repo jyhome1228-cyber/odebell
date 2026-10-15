@@ -5,8 +5,14 @@ const products=[
 {code:'02',name:'피토 뮤신 리페어 크림',price:'52,000원',original:'52,000원',tone:'#e4e4d9',url:'https://odebell.com/product/detail.html?product_no=2059'},
 {code:'03',name:'-8kg 혈당 다이어트 ! 애사비',price:'32,000원',original:'32,000원',tone:'#e8dfd6',url:'https://odebell.com/product/detail.html?product_no=2021'}
 ];
+products.push(
+{code:'04',name:'제품 이미지 준비 중',price:'',tone:'#e8e6df',url:'',placeholder:true},
+{code:'05',name:'제품 이미지 준비 중',price:'',tone:'#e2e1db',url:'',placeholder:true}
+);
 const grid=document.querySelector('#product-grid');
-if(grid)grid.innerHTML=products.map(p=>`<a class="product-card" href="${p.url}" target="_blank" rel="noopener"><div class="product-picture" style="--tone:${p.tone}"><span>PRODUCT IMAGE PENDING · ${p.code}</span></div><div class="product-info"><small>OFFICIAL STORE / ${p.code}</small><h3>${p.name}</h3><p>${p.price}${p.original!==p.price?' · 정상가 '+p.original:''}</p></div></a>`).join('');
+if(grid)grid.innerHTML=products.map(p=>p.placeholder
+?`<article class="product-card product-card-pending"><div class="product-picture" style="--tone:${p.tone}"><span>PRODUCT ${p.code} / IMAGE PENDING</span></div><div class="product-info"><small>ODEBELL / COMING SOON</small><h3>${p.name}</h3><p>최종 상품 자료 확인 후 적용</p></div></article>`
+:`<a class="product-card" href="${p.url}" target="_blank" rel="noopener"><div class="product-picture" style="--tone:${p.tone}"><span>PRODUCT IMAGE PENDING · ${p.code}</span></div><div class="product-info"><small>OFFICIAL STORE / ${p.code}</small><h3>${p.name}</h3><p>${p.price}${p.original!==p.price?' · 정상가 '+p.original:''}</p></div></a>`).join('');
 const nav=document.querySelector('#navigation'),toggle=document.querySelector('.menu-toggle');
 toggle?.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'메뉴 닫기':'메뉴 열기')});
 nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');toggle?.setAttribute('aria-expanded','false')}));
