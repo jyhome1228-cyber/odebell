@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<title>오드벨 ODEBELL</title>
+<!-- 기존 카페24 기본 CSS / 필수 모듈 유지 -->
+<!--@js(/js/module/layout/category.js)-->
+<!--@css(/layout/basic/css/common.css)-->
+<!--@css(/layout/basic/css/layout.css)-->
+<!--@css(/layout/basic/css/ec-base-ui.css)-->
+<!--@css(/layout/basic/css/ec-base-tooltip.css)-->
+<!--@css(/layout/basic/css/ec-base-help.css)-->
+<!--@css(/layout/basic/css/ec-base-product.css)-->
+<!--@css(/layout/basic/css/ec-base-paginate.css)-->
+<!--@css(/layout/basic/css/ec-base-tab.css)-->
+<!--@css(/layout/basic/css/ec-base-button.css)-->
+<!--@css(/layout/basic/css/ec-base-box.css)-->
+<!--@css(/layout/basic/css/ec-base-table.css)-->
+<!--@css(/layout/basic/css/ec-base-desc.css)-->
+<!--@css(/weskin_import/css/layout.css)-->
+<!--@js(/layout/basic/js/basic.js)-->
+<!--@js(/weskin_import/js/basic.js)-->
+<!--@js(/js/common.js)-->
+<!--@js(/js/module/layout/quick_view.js)-->
+<link rel="stylesheet" href="/weskin_import/css/swiper.min.css">
+<script src="/weskin_import/js/swiper.min.js"></script>
+<!-- 기존 스킨 타임세일 기능: noConflict 포함 유지 -->
+<script src="/weskin_import/js/jquery-3.4.1.min.js"></script>
+<script>window.jQuery3_4_1 = jQuery.noConflict(true);</script>
+<!--@css(/weskin_import/css/time_banner.css)-->
+<script src="/weskin_import/js/time_banner.js"></script>
+<!-- 신규 오드벨 공통 디자인 전용 파일: 스마트디자인에 파일 업로드 후 사용 -->
+<!--@css(/weskin_import/css/odebell-renewal.css)-->
+<!--@js(/weskin_import/js/odebell-renewal.js)-->
+</head>
+<body id="main">
+<div id="skipNavigation">
+<p><a href="#category">전체상품목록 바로가기</a></p>
+<p><a href="#contents">본문 바로가기</a></p>
+</div>
+<div id="wrap">
+<!-- 원본 카페24 헤더의 회원/장바구니/카테고리 모듈 보호. 아래 파일은 별도 편집. -->
+<!--@import(/weskin_import/header.html)-->
+<div id="container"><div id="contents"><!--@contents--></div><hr class="layout"></div><hr class="layout">
+</div><hr class="layout">
+<div id="footer">
+<!--@import(/weskin_import/footer.html)-->
+</div>
+<!-- 결제 필수 영역: 제거 금지 -->
+<div id="progressPaybar" style="display:none;">
+<div id="progressPaybarBackground" class="layerProgress"></div>
+<div id="progressPaybarView"><div class="box">
+<p class="graph">
+<span><img src="//img.echosting.cafe24.com/skin/base_ko_KR/layout/txt_progress.gif" alt="현재 결제가 진행중입니다."></span>
+<span><img src="//img.echosting.cafe24.com/skin/base/layout/img_loading.gif" alt=""></span>
+</p>
+<p class="txt">본 결제 창은 결제완료 후 자동으로 닫히며, 결제 진행 중 본 결제 창을 닫으시면 주문이 되지 않으니 결제 완료될 때까지 닫지 마시기 바랍니다.</p>
+</div></div></div>
+<!-- 해외배송 언어/국가 선택 모듈 유지 -->
+<div module="Layout_multishopShipping">
+<!--@css(/layout/basic/css/ec-base-layer.css)-->
+<!--@css(/css/module/layout/multishopShipping.css)-->
+<!--@js(/js/module/layout/multishopShipping.js)-->
+<div class="dimmed"></div><div class="worldshipLayer ec-base-layer">
+<div class="header"><h3>WORLD SHIPPING</h3></div>
+<div class="content"><p class="desc">PLEASE SELECT THE DESTINATION COUNTRY AND LANGUAGE :</p>
+<div class="select"><select module="Layout_multishopShippingCountrylist"><option value="{$country_code}"{$country_default_selected}>SHIPPING TO : {$country_name}</option><option value="{$country_code}"{$country_default_selected}>SHIPPING TO : {$country_name}</option></select></div>
+<div class="select"><select module="Layout_multishopShippingLanguagelist"><option value="{$shop_domain}"{$shop_default_selected}>LANGUAGE : {$shop_language_name}</option><option value="{$shop_domain}"{$shop_default_selected}>LANGUAGE : {$shop_language_name}</option></select></div>
+</div><div class="ec-base-button"><a href="#none" class="btnSubmitFix sizeS">GO</a></div>
+<a href="#none" class="close"><img src="//img.echosting.cafe24.com/skin/base/common/btn_close.gif" width="13" height="13" alt="close"></a>
+</div></div>
+<div module="Layout_conversionPc"><!--@css(/css/module/layout/conversionpc.css)--><a href="{$mobile_url}">모바일 화면보기</a></div>
+</body></html>
