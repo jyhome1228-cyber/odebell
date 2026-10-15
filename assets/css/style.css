@@ -142,3 +142,9 @@ body{background:#fff;color:var(--ink);line-height:1.65;font-size:15px;letter-spa
 }
 
 .mobile-account-links{display:none}@media(max-width:700px){.mobile-account-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 12px;padding:15px 0}.mobile-account-links a{font-size:14px;padding:13px 4px}}
+
+/* Original ODEBELL member-benefit announcement bar */
+.preview.promo-banner{background:#050505;color:#fff;min-height:48px;padding:9px 20px;display:flex;align-items:center;justify-content:center;text-align:center;border:0}
+.preview.promo-banner a{color:#fff;text-decoration:none;font-weight:600;font-size:15px;line-height:1.5;letter-spacing:-.03em;margin:0}
+.preview.promo-banner a:hover{text-decoration:underline;text-underline-offset:3px}
+@media(max-width:700px){.preview.promo-banner{min-height:40px;padding:8px 13px}.preview.promo-banner a{font-size:11px;line-height:1.55}}
