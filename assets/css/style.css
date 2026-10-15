@@ -140,3 +140,5 @@ body{background:#fff;color:var(--ink);line-height:1.65;font-size:15px;letter-spa
 .header-inner>.utilities>a:not(:last-child){display:inline-flex}
 .header-inner>.utilities>a:last-child{font-size:12px}
 }
+
+.mobile-account-links{display:none}@media(max-width:700px){.mobile-account-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 12px;padding:15px 0}.mobile-account-links a{font-size:14px;padding:13px 4px}}
