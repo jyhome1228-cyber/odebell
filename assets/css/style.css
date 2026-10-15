@@ -104,3 +104,39 @@ body{background:#fff;color:var(--ink);line-height:1.65;font-size:15px;letter-spa
 .header-inner>.logo{display:flex;align-items:center;justify-content:center}
 @media(max-width:1100px) and (min-width:701px){.header-inner{padding-left:22px;padding-right:22px}.header-inner>.navigation{gap:17px}.header-inner>.utilities{gap:12px}.header-inner>.navigation>a{font-size:14px}.header-inner>.utilities>a{font-size:13px}}
 @media(max-width:700px){.header-inner{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);height:60px}.header-inner>.menu-toggle{display:flex;align-items:flex-start;justify-content:center;justify-self:start;grid-column:1;grid-row:1}.header-inner>.logo{grid-column:2;grid-row:1}.header-inner>.utilities{grid-column:3;grid-row:1;gap:6px}.header-inner>.navigation{display:none;position:absolute;top:60px;left:0;right:0;align-items:stretch;gap:0;padding:10px 20px 20px}.header-inner>.navigation.open{display:flex;flex-direction:column}.header-inner>.navigation>a{min-height:48px;font-size:15px}.header-inner>.utilities>a:not(:last-child){display:none}.header-inner>.utilities>a:last-child{display:inline-flex;align-items:center;font-size:12px;min-height:40px}.header-inner>.utilities>.search-trigger{width:40px;height:40px;flex-basis:40px}.header-inner>.utilities>.search-trigger svg{width:21px;height:21px}}
+
+/* Preserve ODEBELL's full original navigation and account actions */
+.header-inner{max-width:1760px;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:18px;padding:0 38px}
+.header-inner>.navigation{gap:33px;align-items:center}
+.nav-group{position:relative;display:flex;align-items:center}
+.header-inner>.navigation .nav-group>a{display:flex;align-items:center;min-height:56px;font-size:15px;font-weight:450;text-transform:none;white-space:nowrap}
+.nav-sub{display:none;position:absolute;top:100%;left:-16px;min-width:156px;background:#fff;box-shadow:0 10px 30px #00000016;border:1px solid #ececec;padding:10px 0;z-index:50}
+.nav-sub a{display:block;font-size:13px;line-height:1.4;padding:11px 16px;color:#383838;white-space:nowrap}
+.nav-sub a:hover{background:#f7f7f5}
+.nav-group:hover .nav-sub,.nav-group:focus-within .nav-sub{display:block}
+.header-inner>.utilities{gap:19px;justify-self:end}
+.header-inner>.utilities>a,.header-inner>.utilities>.search-trigger,.language-trigger{display:inline-flex;min-height:44px;align-items:center;justify-content:center;border:0;background:none;white-space:nowrap;padding:0;font-family:inherit;font-weight:450;font-size:15px;line-height:1.2;letter-spacing:-.025em;color:#333;cursor:pointer}
+.header-inner>.utilities>.search-trigger{width:auto;height:44px;min-width:0;flex:0 0 auto;padding:0}
+.cart-count{font-size:11px;margin-left:4px}
+.language-group{position:relative;margin-left:clamp(12px,4vw,75px)}
+.language-trigger{font-size:12px}
+.language-panel{position:absolute;right:0;top:100%;padding:10px;background:#fff;box-shadow:0 8px 20px #0002;white-space:nowrap;z-index:40}
+.language-panel[hidden]{display:none}
+.language-panel>a{font-size:12px}
+@media(max-width:1250px) and (min-width:701px){.header-inner{padding:0 22px;gap:10px}.header-inner>.navigation{gap:16px}.header-inner>.navigation .nav-group>a,.header-inner>.utilities>a,.header-inner>.utilities>.search-trigger{font-size:13px}.header-inner>.utilities{gap:12px}.language-group{margin-left:6px}.logo img{width:110px}}
+@media(max-width:700px){
+.header-inner{grid-template-columns:1fr auto 1fr;gap:7px;padding:0 16px}
+.header-inner>.navigation{display:none;position:absolute;top:60px;left:0;right:0;padding:8px 20px 24px;max-height:calc(100vh - 60px);overflow:auto;background:#fff;align-items:stretch;gap:0}
+.header-inner>.navigation.open{display:flex;flex-direction:column}
+.nav-group{display:block;width:100%;border-bottom:1px solid #eee}
+.header-inner>.navigation .nav-group>a{font-size:16px;min-height:54px}
+.nav-sub{display:none!important;position:static;min-width:0;box-shadow:none;border:none;padding:0 0 12px;background:#fafaf9}
+.nav-group.expanded .nav-sub{display:block!important}
+.nav-sub a{padding:12px 16px;font-size:14px}
+.header-inner>.utilities{gap:8px}
+.header-inner>.utilities .account-link,.header-inner>.utilities .language-group{display:none}
+.header-inner>.utilities>.cart-link{font-size:12px}
+.header-inner>.utilities>.search-trigger{font-size:12px;min-height:40px;height:40px}
+.header-inner>.utilities>a:not(:last-child){display:inline-flex}
+.header-inner>.utilities>a:last-child{font-size:12px}
+}
