@@ -1,3 +1,80 @@
 .sub-hero{padding-top:118px;padding-bottom:95px;text-align:center;border-bottom:1px solid var(--line)}.sub-hero h1{font-family:Georgia,serif;font-size:clamp(62px,9vw,132px);letter-spacing:-.065em;margin:0 0 25px}.sub-hero>p:last-child{font-size:16px;color:var(--muted);max-width:600px;margin:auto}.brand-lead{text-align:center;padding-top:145px;padding-bottom:120px}.brand-lead h2{font-size:clamp(44px,6vw,90px);line-height:1.2}.brand-lead>p:last-child{color:var(--muted);max-width:590px;margin:auto}.values{padding-top:30px}.value{padding:85px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 2fr 1.2fr;gap:25px;align-items:start}.value>span{font-size:11px;letter-spacing:.12em}.value h2{font-size:clamp(32px,4vw,65px);margin:0}.value p{font-size:14px;color:var(--muted)}.minor-title{font-size:38px;margin:100px 0 15px}.section-note{color:var(--muted);font-size:14px}.link-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:45px}.page-link-card{border:1px solid var(--line);padding:35px;min-height:145px;position:relative;transition:background .2s}.page-link-card:hover{background:#eeede6}.page-link-card span{font-size:24px}.page-link-card p{font-size:13px;color:var(--muted);margin:8px 0}.page-link-card b{position:absolute;right:28px;top:30px;font-weight:400}.location-layout{display:grid;grid-template-columns:1fr 1fr;gap:70px;padding:50px 0 100px}.location-layout h2{font-size:clamp(36px,5vw,67px)}.location-layout p:not(.eyebrow){color:var(--muted);line-height:2;margin-bottom:35px}@media(max-width:700px){.sub-hero{padding-top:86px;padding-bottom:75px}.sub-hero h1{font-size:59px}.sub-hero>p:last-child{font-size:13px}.brand-lead{padding-top:90px;padding-bottom:70px}.value{display:block;padding:50px 0}.value h2{font-size:39px;margin:23px 0}.link-cards,.location-layout{grid-template-columns:1fr}.location-layout{gap:55px;padding-top:0}.page-link-card{min-height:120px}.page-link-card span{font-size:21px}}
 /* Subpages share compact Barle-inspired editorial typography */
 .sub-hero{padding-top:90px;padding-bottom:78px}.sub-hero h1{font-family:'Pretendard Variable',Pretendard,sans-serif;font-weight:500;font-size:clamp(38px,5vw,67px);letter-spacing:-.045em}.sub-hero>p:last-child{font-size:14px}.brand-lead h2{font-size:clamp(37px,4vw,58px)}.value h2{font-size:clamp(28px,3vw,45px)}.page-link-card span{font-size:19px}.location-layout h2{font-size:clamp(30px,4vw,48px)}@media(max-width:700px){.sub-hero{padding-top:65px;padding-bottom:62px}.sub-hero h1{font-size:39px}.brand-lead h2{font-size:36px}.value h2{font-size:31px}}
+
+
+/* 2026-10-15 Brand Story renewal — based on official ODEBELL company introduction */
+body[data-page="brand"] .sub-hero{padding-bottom:64px;border-bottom:0}
+body[data-page="brand"] .sub-hero h1{margin-bottom:18px}
+body[data-page="brand"] .sub-hero>p:last-child{max-width:520px}
+
+.brand-story-hero{position:relative;min-height:660px;overflow:hidden;background:#f3eee6;display:flex;align-items:center;justify-content:center;text-align:center;padding:90px 24px}
+.brand-story-art{position:absolute;inset:0;overflow:hidden}
+.brand-orb{position:absolute;border-radius:50%;filter:blur(1px)}
+.brand-orb-a{width:520px;height:520px;left:-120px;top:80px;background:radial-gradient(circle at 35% 35%,#fff9ef 0%,#ead8c5 38%,#caa98f 100%);opacity:.72}
+.brand-orb-b{width:600px;height:600px;right:-170px;bottom:-160px;background:radial-gradient(circle at 45% 35%,#fff7eb 0%,#e7d1b9 45%,#bd9474 100%);opacity:.64}
+.brand-bottle{position:absolute;bottom:-110px;border-radius:38px 38px 18px 18px;background:linear-gradient(100deg,#f9f5ea 0%,#d7c3a7 45%,#f2eadb 76%,#b89f82 100%);box-shadow:18px 26px 45px #6d4e3422}
+.brand-bottle-a{width:118px;height:400px;right:18%;transform:rotate(8deg)}
+.brand-bottle-b{width:96px;height:315px;right:31%;transform:rotate(-5deg);opacity:.86}
+.brand-story-copy{position:relative;z-index:2;max-width:820px;margin:auto}
+.brand-story-copy h2{font-size:clamp(46px,6.5vw,92px);line-height:1.03;letter-spacing:-.065em;font-weight:480;margin:0 0 34px}
+.brand-story-copy>p:last-child{font-size:15px;line-height:1.95;color:#5e5b55;margin:0}
+
+.brand-manifesto{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(280px,.8fr);gap:90px;align-items:end;padding-top:145px;padding-bottom:135px}
+.brand-manifesto-title h2{font-size:clamp(38px,4.5vw,66px);line-height:1.22;margin:0}
+.brand-manifesto-copy{padding-bottom:8px}
+.brand-manifesto-copy p{font-size:15px;line-height:1.95;color:var(--muted);margin:0 0 14px}
+
+.brand-pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;padding-top:0;padding-bottom:145px}
+.brand-pillar{position:relative}
+.brand-pillar>span{position:absolute;z-index:2;top:18px;left:18px;font-size:10px;letter-spacing:.12em;color:#4a463f}
+.brand-pillar-visual{position:relative;aspect-ratio:1/1.08;overflow:hidden;margin-bottom:24px}
+.brand-pillar-visual::before,.brand-pillar-visual::after{content:"";position:absolute;border-radius:50%}
+.brand-pillar-visual::before{width:58%;height:58%;left:10%;top:12%;background:#ffffff88;filter:blur(2px)}
+.brand-pillar-visual::after{width:42%;height:42%;right:6%;bottom:8%;background:#ffffff55}
+.brand-pillar-visual i{position:absolute;left:50%;top:52%;transform:translate(-50%,-50%);width:28%;height:56%;border-radius:40px 40px 18px 18px;background:linear-gradient(90deg,#fff8ec,#d7c5a8 52%,#f6eddd);box-shadow:18px 26px 38px #6f5a4023}
+.tone-clean{background:linear-gradient(135deg,#efe5d8,#f9f3eb 52%,#d9c6b5)}
+.tone-formula{background:linear-gradient(135deg,#e8dfd4,#f5efe6 45%,#cab9a7)}
+.tone-formula i{width:38%;height:42%;border-radius:55px 55px 24px 24px}
+.tone-earth{background:linear-gradient(135deg,#e4e1d3,#f1efe6 48%,#c6c7b2)}
+.tone-earth i{width:35%;height:48%;border-radius:20px 20px 44px 44px}
+.brand-pillar .eyebrow{margin:0 0 10px}
+.brand-pillar h3{font-size:clamp(26px,2.6vw,39px);line-height:1.15;font-weight:480;letter-spacing:-.045em;margin:0 0 18px}
+.brand-pillar>p:last-child{font-size:14px;line-height:1.8;color:var(--muted);max-width:390px}
+
+.brand-signature{background:#3f463f;color:#f7f5ef;min-height:500px;padding:110px max(45px,calc((100vw - 1350px)/2));display:grid;grid-template-columns:1.15fr .85fr;gap:80px;align-items:end}
+.brand-signature .eyebrow{color:#c9cdc5}
+.brand-signature h2{font-size:clamp(44px,6vw,82px);line-height:1.03;margin:0;letter-spacing:-.06em}
+.brand-signature>p{font-size:15px;line-height:1.95;color:#d5d8d1;margin:0 0 8px}
+
+.brand-ending{text-align:center;padding-top:145px;padding-bottom:150px}
+.brand-ending h2{font-size:clamp(36px,4.3vw,62px);line-height:1.3;margin:0}
+
+@media(max-width:900px){
+.brand-story-hero{min-height:560px}
+.brand-manifesto{grid-template-columns:1fr;gap:42px}
+.brand-pillars{grid-template-columns:1fr 1fr}
+.brand-signature{grid-template-columns:1fr;gap:44px;align-items:start}
+}
+@media(max-width:700px){
+body[data-page="brand"] .sub-hero{padding-bottom:38px}
+.brand-story-hero{min-height:500px;padding:70px 20px}
+.brand-story-copy h2{font-size:46px}
+.brand-story-copy>p:last-child{font-size:13px}
+.brand-orb-a{width:330px;height:330px;left:-150px;top:30px}
+.brand-orb-b{width:380px;height:380px;right:-180px;bottom:-80px}
+.brand-bottle-a{width:75px;height:260px;right:8%;bottom:-80px}
+.brand-bottle-b{width:62px;height:220px;right:29%;bottom:-70px}
+.brand-manifesto{padding-top:90px;padding-bottom:85px;gap:28px}
+.brand-manifesto-title h2{font-size:34px}
+.brand-manifesto-copy p{font-size:13px}
+.brand-pillars{grid-template-columns:1fr;gap:54px;padding-bottom:95px}
+.brand-pillar-visual{aspect-ratio:1/1}
+.brand-pillar h3{font-size:31px}
+.brand-pillar>p:last-child{font-size:13px}
+.brand-signature{min-height:430px;padding:80px 24px}
+.brand-signature h2{font-size:45px}
+.brand-signature>p{font-size:13px}
+.brand-ending{padding-top:90px;padding-bottom:95px}
+.brand-ending h2{font-size:31px}
+}
