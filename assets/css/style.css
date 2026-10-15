@@ -88,3 +88,6 @@ body{background:#fff;color:var(--ink);line-height:1.65;font-size:15px;letter-spa
 .about-more:hover{background:#303b2e}
 @media(max-width:1000px){.products .product-grid,.all-products .product-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:700px){.products .product-grid,.all-products .product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:25px 12px}.products .product-info h3{font-size:13px}.about-banner{min-height:410px}.about-banner-content{padding:105px 18px 65px}.about-banner-content p{font-size:13px;line-height:1.65}.about-banner-content h2{font-size:31px;margin-bottom:25px}.about-more{min-width:155px;min-height:48px;font-size:14px}.about-product{transform:scale(.75);transform-origin:center bottom}}
+
+/* Supplied official SVG logo: preserve source aspect ratio 236.57 / 48.27 */
+.logo,.footer-logo{display:inline-flex;align-items:center;line-height:1;letter-spacing:normal}.logo img{display:block;width:129px;height:auto;max-width:100%}.footer-logo img{display:block;width:180px;height:auto;max-width:100%}@media(max-width:700px){.logo img{width:112px}.footer-logo img{width:155px}}
