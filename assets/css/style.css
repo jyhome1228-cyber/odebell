@@ -69,3 +69,22 @@ body{background:#fff;color:var(--ink);line-height:1.65;font-size:15px;letter-spa
 .wide-campaign-caption{padding:42px 22px 55px;display:block}.wide-campaign-caption h2{font-size:30px;margin-bottom:25px}
 .footer{padding:65px 22px 25px}.footer-top{grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 14px}.footer-brand{grid-column:1/-1}.footer-logo{font-size:39px}
 }
+
+/* Full-width, centered About brand banner; replace background with approved artwork. */
+.products .product-grid,.all-products .product-grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:18px}
+.products .product-info h3{font-size:14px;line-height:1.45}
+.products .product-picture::after{width:31%;height:50%;max-width:150px;max-height:230px}
+.about-banner{position:relative;isolation:isolate;display:flex;align-items:flex-start;justify-content:center;min-height:510px;background:#faf5e4;overflow:hidden;text-align:center}
+.about-banner-image{position:absolute;inset:0;background:linear-gradient(115deg,#faf3df 0%,#fcf8e9 48%,#f6f1e2 100%);z-index:-1;overflow:hidden}
+.about-banner-image::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#fbf6e98c,#fbf6e930 62%,#fbf6e900)}
+.about-product{position:absolute;bottom:-155px;width:125px;height:355px;background:linear-gradient(90deg,#eee9da,#ddd1ad 55%,#f4ead0);border-radius:22px 22px 13px 13px;filter:blur(8px);opacity:.46}
+.about-product-one{left:37%;width:115px;height:310px}
+.about-product-two{left:49%;width:110px;height:395px;bottom:-155px;background:linear-gradient(90deg,#f3e7ba,#e5cf88,#f9f2d6)}
+.about-product-three{left:58%;width:150px;height:285px;background:linear-gradient(90deg,#ede7d7,#e4ddc5,#f9f4e7)}
+.about-banner-content{padding:145px 20px 75px;position:relative;z-index:1}
+.about-banner-content p{font-size:18px;letter-spacing:-.02em;margin:0 0 18px;color:#40483d}
+.about-banner-content h2{font-family:'Pretendard Variable',Pretendard,sans-serif;font-size:42px;font-weight:650;letter-spacing:-.04em;margin:0 0 30px;color:#40483d}
+.about-more{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;min-width:188px;min-height:57px;padding:12px 25px;background:#414d3f;color:white;font-size:16px;font-weight:500;transition:background .2s}
+.about-more:hover{background:#303b2e}
+@media(max-width:1000px){.products .product-grid,.all-products .product-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:700px){.products .product-grid,.all-products .product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:25px 12px}.products .product-info h3{font-size:13px}.about-banner{min-height:410px}.about-banner-content{padding:105px 18px 65px}.about-banner-content p{font-size:13px;line-height:1.65}.about-banner-content h2{font-size:31px;margin-bottom:25px}.about-more{min-width:155px;min-height:48px;font-size:14px}.about-product{transform:scale(.75);transform-origin:center bottom}}
