@@ -1,10 +1,71 @@
 const PAGES={brand:{title:"Brand Story",eyebrow:"ABOUT ODEBELL",intro:"오드벨을 통해 되찾는 피부. 숨겨져 있던 내 안의 광채, 아름답게 완성되다."},shop:{title:"Shop",eyebrow:"OUR PRODUCTS",intro:"오드벨의 대표 제품과 공식몰에서 판매 중인 상품을 만나보세요."},community:{title:"Community",eyebrow:"STAY CONNECTED",intro:"오드벨의 공지사항, 고객 후기, 자주 묻는 질문을 확인하세요."},location:{title:"Location",eyebrow:"CONTACT & LOCATION",intro:"오드벨의 오시는 길과 고객센터 정보를 안내합니다."}};
 const page=document.body.dataset.page;const data=PAGES[page];if(!data)throw Error('Unknown page');
 document.title=`${data.title} | ODEBELL`;
-document.body.innerHTML=`<div class="preview promo-banner"><a href="https://odebell.com/member/join.html">신규 회원 가입시 2,000원 적립금 / 회원 가입 축하 할인 쿠폰 3,000원 / 신규 회원 무료배송 쿠폰</a></div><header class="header" id="top"><div class="header-inner"><button class="menu-toggle" type="button" aria-label="전체 메뉴 열기" aria-expanded="false" aria-controls="navigation"><span></span><span></span></button><nav id="navigation" class="navigation" aria-label="주 메뉴"><div class="nav-group"><a href="./brand.html">Brand</a><div class="nav-sub"><a href="./brand.html">브랜드 스토리</a><a href="./location.html">오시는 길</a></div></div><div class="nav-group"><a href="./shop.html">Shop</a><div class="nav-sub"><a href="https://odebell.com/category/hot-deal/45/">HOT DEAL</a></div></div><div class="nav-group"><a href="./community.html">Community</a><div class="nav-sub"><a href="https://odebell.com/board/free/list.html?board_no=1">Notice</a><a href="https://odebell.com/board/gallery/list.html?board_no=8">Event</a><a href="https://odebell.com/board/free/list.html?board_no=3">FAQ</a><a href="https://odebell.com/board/product/list.html?board_no=4">Real Review</a><a href="https://odebell.com/board/product/list.html?board_no=6">Q&amp;A</a><a href="https://odebell.com/board/gallery/list.html?board_no=2">Gallery</a></div></div><div class="mobile-account-links"><a href="https://odebell.com/member/login.html">Login</a><a href="https://odebell.com/member/join.html">Join</a><a href="https://odebell.com/order/basket.html">Cart</a><a href="https://odebell.com/">한국어</a></div></nav><a class="logo" href="./index.html" aria-label="오드벨 홈"><img src="./assets/images/odebell-logo.svg" alt="O'de bell" width="237" height="48"></a><div class="utilities"><a class="account-link" href="https://odebell.com/member/login.html">Login</a><a class="account-link" href="https://odebell.com/member/join.html">Join</a><a class="cart-link" href="https://odebell.com/order/basket.html">Cart <span class="cart-count">( 0 )</span></a><button type="button" class="search-trigger" aria-label="상품 검색 열기" aria-expanded="false" aria-controls="search-panel">Search</button><div class="language-group"><button type="button" class="language-trigger" aria-expanded="false" aria-label="언어 선택">한국어 <span aria-hidden="true">⌄</span></button><div class="language-panel" hidden><a href="https://odebell.com/">한국어</a></div></div></div></div></header><div id="search-panel" class="search-panel" hidden><div class="search-panel-inner"><form id="store-search" action="https://odebell.com/product/search.html" method="get"><label for="search-keyword">SEARCH PRODUCTS</label><div class="search-line"><input id="search-keyword" type="search" name="keyword" placeholder="상품명을 검색해보세요" autocomplete="off" required><button type="submit">검색</button><button type="button" class="search-close" aria-label="검색창 닫기">✕</button></div></form><div id="search-suggestions" aria-live="polite"></div><p class="search-hint">상품 검색은 기존 카페24 공식몰로 연결됩니다.</p></div></div><main><section class="sub-hero section-wrap"><p class="eyebrow">${data.eyebrow}</p><h1>${data.title}</h1><p>${data.intro}</p></section><section id="page-content"></section></main><footer class="footer"><div class="footer-top"><div class="footer-brand"><a class="footer-logo" href="./index.html"><img src="./assets/images/odebell-logo.svg" alt="O’de bell" width="237" height="48"></a><p>Everyday care, thoughtfully made.</p></div><div><p>EXPLORE</p><a href="./shop.html">SHOP</a><a href="./brand.html">ABOUT</a><a href="./community.html">REVIEW & COMMUNITY</a><a href="./location.html">LOCATION</a></div><div><p>SUPPORT</p><a href="https://odebell.com/board/free/list.html?board_no=1" target="_blank" rel="noopener">NOTICE ↗</a><a href="https://odebell.com/board/product/list.html?board_no=6" target="_blank" rel="noopener">Q&A ↗</a><a href="https://odebell.com/member/agreement.html" target="_blank" rel="noopener">TERMS ↗</a><a href="https://odebell.com/member/privacy.html" target="_blank" rel="noopener">PRIVACY ↗</a></div><div><p>CUSTOMER SERVICE</p><a href="tel:01028682677">010-2868-2677</a><span>MON–FRI 09:30–18:00</span><span>ammingz@naver.com</span></div></div><div class="footer-bottom"><span>© ODEBELL. ALL RIGHTS RESERVED.</span><span>벨코퍼레이션 · 대표 김현지 · 사업자등록번호 848-33-01087<br>통신판매업신고 2020-서울강남-00918 · 서울특별시 강남구 선릉로 704, 12층 1292-3호</span></div><p class="footer-disclaimer">사업자 정보와 약관 URL은 기존 공개 사이트를 기준으로 작성된 개발 미리보기입니다. 실서비스 적용 전 카페24 실제 정보·링크 확인이 필요합니다.</p></footer>`;
+document.body.innerHTML=`<div class="preview promo-banner"><a href="https://odebell.com/member/join.html">신규 회원 가입시 2,000원 적립금 / 회원 가입 축하 할인 쿠폰 3,000원 / 신규 회원 무료배송 쿠폰</a></div><header class="header" id="top"><div class="header-inner"><button class="menu-toggle" type="button" aria-label="전체 메뉴 열기" aria-expanded="false" aria-controls="navigation"><span></span><span></span></button><nav id="navigation" class="navigation" aria-label="주 메뉴"><div class="nav-group"><a href="./brand.html">Brand</a><div class="nav-sub"><a href="./brand.html">브랜드 스토리</a></div></div><div class="nav-group"><a href="./shop.html">Shop</a><div class="nav-sub"><a href="https://odebell.com/category/hot-deal/45/">HOT DEAL</a></div></div><div class="nav-group"><a href="./community.html">Community</a><div class="nav-sub"><a href="https://odebell.com/board/free/list.html?board_no=1">Notice</a><a href="https://odebell.com/board/gallery/list.html?board_no=8">Event</a><a href="https://odebell.com/board/free/list.html?board_no=3">FAQ</a><a href="https://odebell.com/board/product/list.html?board_no=4">Real Review</a><a href="https://odebell.com/board/product/list.html?board_no=6">Q&amp;A</a><a href="https://odebell.com/board/gallery/list.html?board_no=2">Gallery</a></div></div><div class="mobile-account-links"><a href="https://odebell.com/member/login.html">Login</a><a href="https://odebell.com/member/join.html">Join</a><a href="https://odebell.com/order/basket.html">Cart</a><a href="https://odebell.com/">한국어</a></div></nav><a class="logo" href="./index.html" aria-label="오드벨 홈"><img src="./assets/images/odebell-logo.svg" alt="O'de bell" width="237" height="48"></a><div class="utilities"><a class="account-link" href="https://odebell.com/member/login.html">Login</a><a class="account-link" href="https://odebell.com/member/join.html">Join</a><a class="cart-link" href="https://odebell.com/order/basket.html">Cart <span class="cart-count">( 0 )</span></a><button type="button" class="search-trigger" aria-label="상품 검색 열기" aria-expanded="false" aria-controls="search-panel">Search</button><div class="language-group"><button type="button" class="language-trigger" aria-expanded="false" aria-label="언어 선택">한국어 <span aria-hidden="true">⌄</span></button><div class="language-panel" hidden><a href="https://odebell.com/">한국어</a></div></div></div></div></header><div id="search-panel" class="search-panel" hidden><div class="search-panel-inner"><form id="store-search" action="https://odebell.com/product/search.html" method="get"><label for="search-keyword">SEARCH PRODUCTS</label><div class="search-line"><input id="search-keyword" type="search" name="keyword" placeholder="상품명을 검색해보세요" autocomplete="off" required><button type="submit">검색</button><button type="button" class="search-close" aria-label="검색창 닫기">✕</button></div></form><div id="search-suggestions" aria-live="polite"></div><p class="search-hint">상품 검색은 기존 카페24 공식몰로 연결됩니다.</p></div></div><main><section class="sub-hero section-wrap"><p class="eyebrow">${data.eyebrow}</p><h1>${data.title}</h1><p>${data.intro}</p></section><section id="page-content"></section></main><footer class="footer"><div class="footer-top"><div class="footer-brand"><a class="footer-logo" href="./index.html"><img src="./assets/images/odebell-logo.svg" alt="O’de bell" width="237" height="48"></a><p>Everyday care, thoughtfully made.</p></div><div><p>EXPLORE</p><a href="./shop.html">SHOP</a><a href="./brand.html">ABOUT</a><a href="./community.html">REVIEW & COMMUNITY</a></div><div><p>SUPPORT</p><a href="https://odebell.com/board/free/list.html?board_no=1" target="_blank" rel="noopener">NOTICE ↗</a><a href="https://odebell.com/board/product/list.html?board_no=6" target="_blank" rel="noopener">Q&A ↗</a><a href="https://odebell.com/member/agreement.html" target="_blank" rel="noopener">TERMS ↗</a><a href="https://odebell.com/member/privacy.html" target="_blank" rel="noopener">PRIVACY ↗</a></div><div><p>CUSTOMER SERVICE</p><a href="tel:01028682677">010-2868-2677</a><span>MON–FRI 09:30–18:00</span><span>ammingz@naver.com</span></div></div><div class="footer-bottom"><span>© ODEBELL. ALL RIGHTS RESERVED.</span><span>벨코퍼레이션 · 대표 김현지 · 사업자등록번호 848-33-01087<br>통신판매업신고 2020-서울강남-00918 · 서울특별시 강남구 선릉로 704, 12층 1292-3호</span></div><p class="footer-disclaimer">사업자 정보와 약관 URL은 기존 공개 사이트를 기준으로 작성된 개발 미리보기입니다. 실서비스 적용 전 카페24 실제 정보·링크 확인이 필요합니다.</p></footer>`;
 const content=document.querySelector('#page-content');
 const card=(heading,detail,url)=>`<a class="page-link-card" href="${url}" target="_blank" rel="noopener"><span>${heading}</span><p>${detail}</p><b aria-hidden="true">↗</b></a>`;
-if(page==='brand')content.innerHTML=`<section class="brand-lead section-wrap"><span class="eyebrow">O'de bell is a life</span><h2>당신 안의 광채를<br>아름답게 완성하다.</h2><p>오드벨은 정직한 마인드로 자연에서 얻은 깨끗하고 안전한 성분으로 저자극 임상 시험을 통과한 제품만 출시합니다.</p></section><section class="values section-wrap"><div class="value"><span>01 / INGREDIENTS</span><h2>Clean and safe<br><em>ingredients from nature.</em></h2><p>자연에서 얻은 깨끗하고 안전한 성분으로 민감한 피부에도 편안하게 사용할 수 있도록 생각합니다.</p></div><div class="value"><span>02 / FORMULA</span><h2>Healthy, lively,<br><em>flawless skin.</em></h2><p>오드벨만의 독자적인 성분 배합을 통해 건강하고 생기 있는 피부를 경험해 보세요.</p></div><div class="value"><span>03 / SUSTAINABILITY</span><h2>Clean beauty<br><em>for the environment.</em></h2><p>환경을 생각하는 클린뷰티. 친환경 패키지 단상자와 친환경 잉크 SOYINK을 사용합니다.</p></div></section>`;
+if(page==='brand')content.innerHTML=`
+<section class="brand-story-hero">
+  <div class="brand-story-art" aria-hidden="true">
+    <span class="brand-orb brand-orb-a"></span>
+    <span class="brand-orb brand-orb-b"></span>
+    <span class="brand-bottle brand-bottle-a"></span>
+    <span class="brand-bottle brand-bottle-b"></span>
+  </div>
+  <div class="brand-story-copy">
+    <p class="eyebrow">O'DE BELL IS A LIFE</p>
+    <h2>Clean beauty,<br>made for everyday glow.</h2>
+    <p>오드벨은 일상 속 피부가 편안하게 빛날 수 있도록<br>성분과 사용감, 그리고 지속 가능한 선택을 함께 생각합니다.</p>
+  </div>
+</section>
+
+<section class="brand-manifesto section-wrap">
+  <div class="brand-manifesto-title">
+    <p class="eyebrow">OUR PHILOSOPHY</p>
+    <h2>자연에서 얻은 깨끗한 성분으로,<br>피부 본연의 생기를.</h2>
+  </div>
+  <div class="brand-manifesto-copy">
+    <p>오드벨은 정직한 마인드로 자연에서 얻은 깨끗하고 안전한 성분을 바탕으로 제품을 만듭니다.</p>
+    <p>저자극 임상 시험을 통과한 제품만 선보이며, 민감한 피부에도 편안한 데일리 케어를 지향합니다.</p>
+  </div>
+</section>
+
+<section class="brand-pillars section-wrap">
+  <article class="brand-pillar">
+    <span>01</span>
+    <div class="brand-pillar-visual tone-clean" aria-hidden="true"><i></i></div>
+    <p class="eyebrow">CLEAN & SAFE</p>
+    <h3>Clean and safe<br>ingredients from nature.</h3>
+    <p>자연에서 얻은 깨끗하고 안전한 성분을 바탕으로 피부가 편안하게 받아들일 수 있는 제품을 고민합니다.</p>
+  </article>
+  <article class="brand-pillar">
+    <span>02</span>
+    <div class="brand-pillar-visual tone-formula" aria-hidden="true"><i></i></div>
+    <p class="eyebrow">O'DEBELL FORMULA</p>
+    <h3>Healthy, lively,<br>flawless skin.</h3>
+    <p>오드벨만의 독자적인 성분 배합을 통해 건강하고 생기 있는 피부 컨디션을 위한 일상의 루틴을 제안합니다.</p>
+  </article>
+  <article class="brand-pillar">
+    <span>03</span>
+    <div class="brand-pillar-visual tone-earth" aria-hidden="true"><i></i></div>
+    <p class="eyebrow">CLEAN BEAUTY</p>
+    <h3>Beauty that cares<br>about the environment.</h3>
+    <p>친환경 패키지 단상자와 친환경 잉크인 SOY INK를 사용하며, 환경을 생각하는 클린뷰티를 이어갑니다.</p>
+  </article>
+</section>
+
+<section class="brand-signature">
+  <div>
+    <p class="eyebrow">ODEBELL SIGNATURE</p>
+    <h2>Healthy, lively,<br>beautifully yours.</h2>
+  </div>
+  <p>매일 반복되는 스킨케어가 피부 본연의 리듬을 되찾는 시간이 되도록.<br>오드벨은 과하지 않은 아름다움과 오래 지속되는 편안함을 제안합니다.</p>
+</section>
+
+<section class="brand-ending section-wrap">
+  <p class="eyebrow">OUR PROMISE</p>
+  <h2>오드벨만의 독자적인 성분 배합을 통해<br>건강하고 생기 있는 피부를 경험해 보세요.</h2>
+</section>`;
 if(page==='shop')content.innerHTML=`<section class="section-wrap"><div class="section-head"><div><p class="eyebrow">BEST SELLERS</p><h2>ODEBELL Selection</h2></div><p>실제 구매 시 공식몰의 가격과 재고가 적용됩니다.</p></div><div class="product-grid" id="shop-grid"></div><h2 class="minor-title">HOT DEAL</h2><p class="section-note">기존 공식몰 HOT DEAL은 외부 브랜드 제품을 포함합니다. 오드벨 자체 제품과 구분하여 안내합니다.</p><div class="link-cards">${card('기존 HOT DEAL 전체 상품','현재 상품, 재고 및 할인정보 확인','https://odebell.com/category/hot-deal/45/')}</div></section>`;
 if(page==='community')content.innerHTML=`<section class="section-wrap"><div class="section-head"><div><p class="eyebrow">COMMUNITY</p><h2>Explore our stories.</h2></div><p>게시판 글쓰기 및 검색 기능은 기존 카페24 게시판을 이용합니다.</p></div><div class="link-cards">${card('Notice','공지사항','https://odebell.com/board/free/list.html?board_no=1')}${card('Event','이벤트 소식','https://odebell.com/board/gallery/list.html?board_no=8')}${card('FAQ','자주 묻는 질문','https://odebell.com/board/free/list.html?board_no=3')}${card('Real Review','실제 고객 후기','https://odebell.com/board/product/list.html?board_no=4')}${card('Q&A','상품 및 이용 문의','https://odebell.com/board/product/list.html?board_no=6')}${card('Gallery','브랜드 이미지와 소식','https://odebell.com/board/gallery/list.html?board_no=2')}</div></section>`;
 if(page==='location')content.innerHTML=`<section class="section-wrap"><div class="location-layout"><div><p class="eyebrow">ADDRESS</p><h2>Visit ODEBELL.</h2><p>서울특별시 강남구 선릉로 704<br>(청담동, 청담벤처프라자)<br>12층 1292-3호</p><a class="text-link" href="https://map.naver.com/p/search/서울특별시 강남구 선릉로 704" target="_blank" rel="noopener">VIEW MAP ↗</a></div><div><p class="eyebrow">CUSTOMER SERVICE</p><h2>We're here to help.</h2><p>010-2868-2677<br>MON–FRI 09:30–18:00<br>주말 및 공휴일 휴무</p><a class="text-link" href="tel:01028682677">CALL US ↗</a></div></div></section>`;
