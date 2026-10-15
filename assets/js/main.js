@@ -13,9 +13,7 @@ const grid=document.querySelector('#product-grid');
 if(grid)grid.innerHTML=products.map(p=>p.placeholder
 ?`<article class="product-card product-card-pending"><div class="product-picture" style="--tone:${p.tone}"><span>PRODUCT ${p.code} / IMAGE PENDING</span></div><div class="product-info"><small>ODEBELL / COMING SOON</small><h3>${p.name}</h3><p>최종 상품 자료 확인 후 적용</p></div></article>`
 :`<a class="product-card" href="./product.html?product_no=${new URL(p.url).searchParams.get('product_no')}"><div class="product-picture" style="--tone:${p.tone}"><span>PRODUCT IMAGE PENDING · ${p.code}</span></div><div class="product-info"><small>OFFICIAL STORE / ${p.code}</small><h3>${p.name}</h3><p>${p.price}${p.original!==p.price?' · 정상가 '+p.original:''}</p></div></a>`).join('');
-const nav=document.querySelector('#navigation'),toggle=document.querySelector('.menu-toggle');
-toggle?.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'메뉴 닫기':'메뉴 열기')});
-nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');toggle?.setAttribute('aria-expanded','false')}));
+
 if('IntersectionObserver'in window){const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})},{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el))}else document.querySelectorAll('.reveal').forEach(el=>el.classList.add('visible'));
 // Shared search overlay with verified featured products; server search runs on the official Cafe24 store.
 function setupStoreSearch(){
@@ -35,3 +33,13 @@ setupStoreSearch();
 // Secondary collection presentation, keeping Cafe24-bound content in one dataset.
 const moreGrid=document.querySelector('#all-products-grid');
 if(moreGrid&&grid){moreGrid.innerHTML=grid.innerHTML;}
+
+// Retain original store navigation, mobile submenu access, and language menu.
+function setupOriginalHeader(){
+ const btn=document.querySelector('.menu-toggle'),nav=document.querySelector('#navigation');
+ if(btn&&nav){btn.addEventListener('click',()=>{const expanded=nav.classList.toggle('open');btn.setAttribute('aria-expanded',String(expanded))});}
+ document.querySelectorAll('.nav-group > a').forEach(a=>{a.addEventListener('click',e=>{if(window.innerWidth>700)return;const group=a.closest('.nav-group');if(!group.classList.contains('expanded')){e.preventDefault();document.querySelectorAll('.nav-group.expanded').forEach(x=>{if(x!==group)x.classList.remove('expanded')});group.classList.add('expanded')}})});
+ const lang=document.querySelector('.language-trigger'),menu=document.querySelector('.language-panel');lang?.addEventListener('click',()=>{const opening=menu.hidden;menu.hidden=!opening;lang.setAttribute('aria-expanded',String(opening))});
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&menu&&!menu.hidden){menu.hidden=true;lang.setAttribute('aria-expanded','false')}});
+}
+setupOriginalHeader();
