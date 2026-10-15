@@ -91,3 +91,16 @@ body{background:#fff;color:var(--ink);line-height:1.65;font-size:15px;letter-spa
 
 /* Supplied official SVG logo: preserve source aspect ratio 236.57 / 48.27 */
 .logo,.footer-logo{display:inline-flex;align-items:center;line-height:1;letter-spacing:normal}.logo img{display:block;width:129px;height:auto;max-width:100%}.footer-logo img{display:block;width:180px;height:auto;max-width:100%}@media(max-width:700px){.logo img{width:112px}.footer-logo img{width:155px}}
+
+/* 2026-10-15: header baseline/alignment audit, +2pt navigation typography */
+.header-inner{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center}
+.header-inner>.navigation,.header-inner>.utilities,.header-inner>.logo{align-self:center;min-height:0}
+.header-inner>.navigation{display:flex;align-items:center;justify-self:start;gap:28px}
+.header-inner>.navigation>a{display:inline-flex;align-items:center;min-height:44px;line-height:1.25;font-size:15px;font-weight:500;white-space:nowrap}
+.header-inner>.utilities{display:flex;align-items:center;justify-self:end;gap:24px}
+.header-inner>.utilities>a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;line-height:1.25;font-size:14px;font-weight:500;white-space:nowrap}
+.header-inner>.utilities>.search-trigger{display:inline-flex;flex:0 0 44px;align-items:center;justify-content:center;width:44px;height:44px;min-height:44px;margin:0;padding:0;line-height:1;vertical-align:middle}
+.header-inner>.utilities>.search-trigger svg{display:block;flex:none;width:23px;height:23px;vertical-align:middle}
+.header-inner>.logo{display:flex;align-items:center;justify-content:center}
+@media(max-width:1100px) and (min-width:701px){.header-inner{padding-left:22px;padding-right:22px}.header-inner>.navigation{gap:17px}.header-inner>.utilities{gap:12px}.header-inner>.navigation>a{font-size:14px}.header-inner>.utilities>a{font-size:13px}}
+@media(max-width:700px){.header-inner{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);height:60px}.header-inner>.menu-toggle{display:flex;align-items:flex-start;justify-content:center;justify-self:start;grid-column:1;grid-row:1}.header-inner>.logo{grid-column:2;grid-row:1}.header-inner>.utilities{grid-column:3;grid-row:1;gap:6px}.header-inner>.navigation{display:none;position:absolute;top:60px;left:0;right:0;align-items:stretch;gap:0;padding:10px 20px 20px}.header-inner>.navigation.open{display:flex;flex-direction:column}.header-inner>.navigation>a{min-height:48px;font-size:15px}.header-inner>.utilities>a:not(:last-child){display:none}.header-inner>.utilities>a:last-child{display:inline-flex;align-items:center;font-size:12px;min-height:40px}.header-inner>.utilities>.search-trigger{width:40px;height:40px;flex-basis:40px}.header-inner>.utilities>.search-trigger svg{width:21px;height:21px}}
