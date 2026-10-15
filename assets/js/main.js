@@ -25,3 +25,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!panel.hidden)setOp
 document.addEventListener('click',e=>{if(!panel.hidden&&!panel.contains(e.target)&&!trigger.contains(e.target))setOpen(false)});
 }
 setupStoreSearch();
+
+// Secondary collection presentation, keeping Cafe24-bound content in one dataset.
+const moreGrid=document.querySelector('#all-products-grid');
+if(moreGrid&&grid){moreGrid.innerHTML=grid.innerHTML;}
