@@ -148,3 +148,24 @@ body{background:#fff;color:var(--ink);line-height:1.65;font-size:15px;letter-spa
 .preview.promo-banner a{color:#fff;text-decoration:none;font-weight:600;font-size:15px;line-height:1.5;letter-spacing:-.03em;margin:0}
 .preview.promo-banner a:hover{text-decoration:underline;text-underline-offset:3px}
 @media(max-width:700px){.preview.promo-banner{min-height:40px;padding:8px 13px}.preview.promo-banner a{font-size:11px;line-height:1.55}}
+
+/* 2026-10-18 client review: warm champagne shared header, readable menu, full-quality image support */
+:root{--ode-header:#f5efe5;--ode-banner:#d9c7ad;--ode-deep:#302d2a}
+.preview.promo-banner{background:var(--ode-banner);color:var(--ode-deep);border:0}
+.preview.promo-banner a{color:var(--ode-deep);font-weight:600}
+.header{background:var(--ode-header);border-bottom:1px solid #e8dfd2}
+.header-inner>.navigation{gap:clamp(18px,2.3vw,38px)}
+.header-inner>.navigation>.nav-direct{display:inline-flex;align-items:center;min-height:48px;font-size:15px;font-weight:600;letter-spacing:-.015em;white-space:nowrap;line-height:1.25}
+.header-inner>.utilities>a,.header-inner>.utilities>.search-trigger,.language-trigger{font-weight:500}
+body{font-weight:450}
+.hero-desc,.section-head>p,.brand-manifesto-copy p{font-weight:500}
+.product-info h3,.review-grid h3{font-weight:600}
+.product-info p,.review-grid p{font-weight:500}
+.product-picture img{width:100%;height:100%;object-fit:contain;display:block;image-rendering:auto}
+.product-picture:has(>img)::after{display:none}
+@media(max-width:700px){
+.header-inner>.navigation{background:var(--ode-header);gap:0}
+.header-inner>.navigation>.nav-direct{width:100%;min-height:52px;border-bottom:1px solid #dfd5c7;font-size:16px;font-weight:600}
+.preview.promo-banner{padding-left:14px;padding-right:14px}
+.preview.promo-banner a{font-size:11px}
+}
